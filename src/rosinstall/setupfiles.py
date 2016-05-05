@@ -290,6 +290,10 @@ EOPYTHON`
 unset _ROS_ROOT_ROSINSTALL
 fi
 
+if [ -z "${ROS_ROOT}" ]; then
+  export ROS_ROOT=/usr/share/ros
+fi
+
 if [ ! -z "$_SETUP_SH_ERROR" ]; then
   # return failure code when sourcing file
   false
